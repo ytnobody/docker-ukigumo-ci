@@ -1,0 +1,2 @@
+ukigumo-server: ukigumo-server --port=2828 --max-workers=4 --config=/usr/local/ukigumo/config.pl
+ukigumo-agent: ukigumo-agent --port=2829 --server_url=http://127.0.0.1:2828 --work_dir=/opt/ukigumo

@@ -38,7 +38,28 @@ RUN source /root/.bash_profile && \
     plenv install 5.20.3 --as 5.20 && \
     plenv global 5.20 &&  \
     plenv install-cpanm && \
-    plenv rehash && \
-    cpanm Ukigumo::Client Ukigumo::Agent Ukigumo::Server -n
+    plenv rehash
 
-RUN source /root/.bash_profile && plenv versions
+RUN mkdir -pv /usr/local/ukigumo
+
+COPY ukigumo/config.pl /usr/local/ukigumo/
+
+COPY ukigumo/Procfile /usr/local/ukigumo/
+
+COPY ukigumo/cpanfile /usr/local/ukigumo/
+
+WORKDIR /usr/local/ukigumo
+
+RUN source /root/.bash_profile && \
+    cpanm -n --installdeps . 
+
+RUN mkdir -pv /opt/ukigumo
+
+VOLUME /opt/ukigumo
+
+EXPOSE 2828
+EXPOSE 2829
+
+ENTRYPOINT source /root/.bash_profile && \
+    proclet start
+

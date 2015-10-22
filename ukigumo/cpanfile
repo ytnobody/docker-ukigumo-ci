@@ -1,0 +1,4 @@
+requires 'Ukigumo::Client';
+requires 'Ukigumo::Server';
+requires 'Ukigumo::Agent' => '0.1.8';
+requires 'Proclet';
