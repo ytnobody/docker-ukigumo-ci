@@ -61,7 +61,7 @@ You can use following perls via ``plenv local`` command in ``before_install``.
 ## EXPOSED PORT
 
 - TCP/2828 : Ukigumo Server
-- TCP/2929 : Ukigumo Agent
+- TCP/2829 : Ukigumo Agent
 
 ## SEE ALSO
 
