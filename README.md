@@ -14,11 +14,13 @@ This docker image provides [ukigumo-server](https://github.com/ukigumo/Ukigumo-S
 
 1. Add ``.ukigumo.yml`` file in your repository. Example.
 
+```
     before_install:
       - "plenv local 5.14"
       - "cpanm -L ./extlib --installdeps --with-develop -n ."
     script:
       - "prove -Iextlib/lib/perl5 -Ilib t/"
+```
 
 2. Add a WebHook
 
