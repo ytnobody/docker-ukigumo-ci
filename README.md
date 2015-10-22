@@ -41,6 +41,17 @@ You can try to enqueue by cURL like as followings.
 
 Then, test will be running on your ukigumo-ci container.
 
+## Contained Perl Versions
+
+You can use following perls via ``plenv local`` command in ``before_install``.
+
+- 5.20 (perl-5.20.3)
+- 5.18 (perl-5.18.4)
+- 5.16 (perl-5.16.3)
+- 5.14 (perl-5.14.4)
+- 5.12 (perl-5.12.5)
+- 5.10 (perl-5.10.1)
+
 ## VOLUME
 
 - /opt/ukigumo
