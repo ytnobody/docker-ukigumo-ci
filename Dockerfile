@@ -1,4 +1,4 @@
-FROM ytnobody/base
+FROM ytnobody/base:wheezy
 MAINTAINER ytnobody <ytnobody@gmail.com>
 
 RUN mv /bin/sh /bin/ash && ln -s /bin/bash /bin/sh
